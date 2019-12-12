@@ -1,18 +1,18 @@
 {
-  "name": "new-app",
+  "name": "business",
   "version": "1.0.0",
-  "description": "New application schema",
+  "description": "Application to describe and manage business objects",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@stryker-mutator/core": "^2.0.2",
-    "@stryker-mutator/javascript-mutator": "^2.0.2",
-    "@stryker-mutator/mocha-framework": "^2.0.2",
-    "@stryker-mutator/mocha-runner": "^2.0.2",
+    "@stryker-mutator/core": "^2.4.0",
+    "@stryker-mutator/javascript-mutator": "^2.4.0",
+    "@stryker-mutator/mocha-framework": "^2.4.0",
+    "@stryker-mutator/mocha-runner": "^2.4.0",
     "chai": "^4.2.0",
-    "cucumber": "^5.0.2",
-    "mocha": "^6.1.4",
-    "release-it": "^12.3.3"
+    "cucumber": "^5.1.0",
+    "mocha": "^6.2.2",
+    "release-it": "^12.4.3"
   },
   "scripts": {
     "release": "release-it",
@@ -27,22 +27,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unsegnor/new-app.git"
+    "url": "git+https://github.com/unsegnor/business.git"
   },
   "keywords": [
-    "New",
-    "app",
-    "test",
-    "BDD",
-    "gherkins",
-    "cucumber",
-    "CI",
-    "travis"
+    "business",
+    "objects"
   ],
   "author": "Víctor Calatayud Asensio",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/unsegnor/new-app/issues"
+    "url": "https://github.com/unsegnor/business/issues"
   },
-  "homepage": "https://github.com/unsegnor/new-app#readme"
+  "homepage": "https://github.com/unsegnor/business#readme"
 }
