@@ -12,7 +12,9 @@
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
     "mocha": "^6.2.2",
-    "release-it": "^12.4.3"
+    "persistent-programming": "^3.0.3",
+    "release-it": "^12.4.3",
+    "sinon": "^7.5.0"
   },
   "scripts": {
     "release": "release-it",
