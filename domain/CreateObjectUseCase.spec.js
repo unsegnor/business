@@ -11,7 +11,7 @@ describe('CreateObjectUseCase', function(){
         expect(objectRepository.getNew.called).to.equal(true)
     })
 
-    it('must add the object to the application specified', async function(){
+    xit('must add the object to the application specified', async function(){
         var objectRepository = new FakeObjectRepository()
         var fakeObject = new FakeObject()
         var applicationId = 'applicationId'

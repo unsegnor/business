@@ -24,8 +24,7 @@ describe('CreateObject', function(){
     })
 
     it('must create objects in the user space', async function(){
-        await createObjectRequest.set("user", user1)
-        await business.createObject({createObjectRequest, createObjectResponse})
+        await business.createObject()
         await business.getAllObjects({getAllObjectsRequest, getAllObjectsResponse})
         var result = await getAllObjectsResponse.get("result")
         expect(result.length).to.equal(1)
