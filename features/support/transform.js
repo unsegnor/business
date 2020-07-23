@@ -14,3 +14,20 @@ defineParameterType({
   },
   name: 'operation'
 })
+
+defineParameterType({
+  name: 'user',
+  regexp: /Jhon|Lily|Unknown/,
+  transformer: function (operationId) {
+    switch (operationId) {
+      case 'Jhon':
+        return this.incrementBy
+      case 'Lily':
+        return this.decrementBy
+      case 'Unknown':
+        return this.decrementBy
+      default:
+        throw new Error(`Operation ${operationId} not supported`)
+    }
+  }
+})
