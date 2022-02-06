@@ -2,27 +2,26 @@
 const { Given, When, Then } = require('cucumber')
 const { expect } = require('chai')
 
-Given('{user} created an object', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+Given('{actor} created an object', async function (actor) {
+  await actor.createObject()
 });
 
-When('{user} asks for their objects', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+When('{actor} creates an object', async function (actor) {
+  await actor.createObject()
 });
 
-Then('an object must be returned', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+When('{actor} asks for their objects', async function (actor) {
+  await actor.getObjects()
 });
 
-Then('no objects must be returned', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+Then('{actor} must receive an object', async function (actor) {
+  expect(await actor.hasReceivedAnObject()).to.equal(true)
 });
 
-Then('{user} must receive an error message saying that {string}', function (string) {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+Then('{actor} must receive no objects', async function (actor) {
+  expect(await actor.hasReceivedAnObject()).to.equal(false)
+});
+
+Then('{actor} must receive an error message saying that {string}', async function (actor, expectedMessage) {
+  expect(await actor.hasReceivedError(expectedMessage)).to.equal(true)
 });

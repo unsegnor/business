@@ -1,12 +1,22 @@
 // features/support/world.js
 const { setWorldConstructor } = require('cucumber')
+const FakeAuthenticator = require('../../adapters/FakeAuthenticator')
 const Authenticator = require('../../adapters/FakeAuthenticator')
+const FakeActor = require('../../test-doubles/FakeActor')
 
 class CustomWorld {
   constructor () {
     this.variable = 0
-    this.authenticator = Authenticator();
-    create_users();
+    this.authenticator = Authenticator()
+    this.create_users()
+  }
+
+  create_users(){
+    this.actors = {
+      Jhon: FakeActor(),
+      Lily: FakeActor(),
+      Unknown: FakeActor()
+    }
   }
 
   setTo (number) {
@@ -19,10 +29,6 @@ class CustomWorld {
 
   decrementBy (number) {
     this.variable -= number
-  }
-
-  create_users(){
-    this.users.push({name: 'Jhon'})
   }
 }
 
